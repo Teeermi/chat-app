@@ -10,9 +10,13 @@ import {useEffect, useState} from "react";
 import {getSession, moveToRoom} from "@/lib/actions";
 
 
+import { io } from "socket.io-client";
+
+
 export default function Home() {
 const [session, setSession] = useState(null);
-
+const socket = io("http://localhost:3000");
+socket.on("connect", () => console.log("Connected to WebSocket server"));
 
     useEffect(() => {
         async function fetchData() {
@@ -23,7 +27,7 @@ const [session, setSession] = useState(null);
     }, []);
 
 
-
+console.log(session)
 
 
   if (session) {
