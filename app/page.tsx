@@ -1,22 +1,20 @@
 "use client";
 import {SignIn} from "@/components/sign-in";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import { Input } from "@/components/ui/input"
 import {ModeToggle} from "@/components/mode";
 import { Button } from "@/components/ui/button"
-import {SignOut} from "@/components/sign-out";
+
 import Form from "next/form";
 import {useEffect, useState} from "react";
 import {getSession, moveToRoom} from "@/lib/actions";
+import { Session } from "next-auth";
+import UserProfile from "@/components/UserProfile";
 
-
-import { io } from "socket.io-client";
 
 
 export default function Home() {
-const [session, setSession] = useState(null);
-const socket = io("http://localhost:3000");
-socket.on("connect", () => console.log("Connected to WebSocket server"));
+const [session, setSession] = useState<Session | null>(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -27,7 +25,6 @@ socket.on("connect", () => console.log("Connected to WebSocket server"));
     }, []);
 
 
-console.log(session)
 
 
   if (session) {
@@ -40,26 +37,10 @@ console.log(session)
 
             <Form action={moveToRoom} className="flex gap-2 mb-[25rem]" >
                 <Input type="number" placeholder="Code" name="code"/>
-                <Button type="submit">Subscribe</Button>
+                <Button type="submit">Move</Button>
             </Form>
 
-        <div className="userProfile flex gap-1 justify-center items-center  ">
-            <Avatar>
-                <AvatarImage src={`${session?.user?.image}`} />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-
-            <div className="userProfileText">
-                <small className="text-sm font-medium leading-none">{session?.user?.name}</small>
-
-                <p className="text-sm text-muted-foreground">{session?.user?.email}</p>
-
-            </div>
-
-            <SignOut />
-
-            <ModeToggle />
-        </div>
+        <UserProfile session={session} />
         </div>
     )
 
