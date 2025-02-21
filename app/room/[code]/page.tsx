@@ -79,16 +79,21 @@ useEffect(() => {
                     
                             if (message.user === session?.user?.name) {
                                 return (
-                                    <p key={index} className="text-right w-full">
+                                    <div  key={index} className="rightSide flex justify-end mb-2 ">
                                         <span className="bg-secondary p-2 break-words overflow-hidden text-ellipsis">
                                             {message.message}
                                         </span>
-                                    </p>
+                                    </div>
                                 );
                             }
 
                             return <p key={index}>{message.message}</p>;
                         })}
+
+                            
+
+
+
                         <div ref={bottomRef} />
                     </ScrollArea>
 
