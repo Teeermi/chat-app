@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Loader = () => {
   return (
@@ -14,7 +14,7 @@ const Loader = () => {
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .wrapper {
@@ -33,7 +33,7 @@ const StyledWrapper = styled.div`
     background-color: #fff;
     left: 15%;
     transform-origin: 50%;
-    animation: circle7124 .5s alternate infinite ease;
+    animation: circle7124 0.5s alternate infinite ease;
   }
 
   @keyframes circle7124 {
@@ -57,27 +57,27 @@ const StyledWrapper = styled.div`
 
   .circle:nth-child(2) {
     left: 45%;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
   }
 
   .circle:nth-child(3) {
     left: auto;
     right: 15%;
-    animation-delay: .3s;
+    animation-delay: 0.3s;
   }
 
   .shadow {
     width: 20px;
     height: 4px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 62px;
     transform-origin: 50%;
     z-index: -1;
     left: 15%;
     filter: blur(1px);
-    animation: shadow046 .5s alternate infinite ease;
+    animation: shadow046 0.5s alternate infinite ease;
   }
 
   @keyframes shadow046 {
@@ -87,24 +87,25 @@ const StyledWrapper = styled.div`
 
     40% {
       transform: scaleX(1);
-      opacity: .7;
+      opacity: 0.7;
     }
 
     100% {
-      transform: scaleX(.2);
-      opacity: .4;
+      transform: scaleX(0.2);
+      opacity: 0.4;
     }
   }
 
   .shadow:nth-child(4) {
     left: 45%;
-    animation-delay: .2s
+    animation-delay: 0.2s;
   }
 
   .shadow:nth-child(5) {
     left: auto;
     right: 15%;
-    animation-delay: .3s;
-  }`;
+    animation-delay: 0.3s;
+  }
+`;
 
 export default Loader;
