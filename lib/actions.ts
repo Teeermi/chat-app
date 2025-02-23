@@ -17,7 +17,6 @@ export async function getSession() {
 
 export async function moveToRoom(formData: FormData) {
     const code = formData.get("code") as string;
-    console.log(code);
 
     redirect(`/room/${code}`);
 
