@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/hover-card";
 import { CornerDownLeft, Download } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const socket = io("http://192.168.0.52:3000");
 
@@ -52,7 +53,7 @@ export default function Page() {
       });
     }
     fetchData();
-  }, []);
+  }, [params.code]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -126,7 +127,7 @@ export default function Page() {
   }
 
   return (
-    <div className="roomWrapper w-full h-full flex flex-col items-center pb-9">
+    <div className="roomWrapper w-full h-full flex flex-col items-center pb-9 ">
       <div className="wrapperV2 w-full h-full flex flex-col items-center justify-center">
         <div className="flex justify-center gap-3">
           <Link href="/">
@@ -160,14 +161,18 @@ export default function Page() {
 
                             <h2 className=" bg-muted-foreground text-right rounded-b-lg mb-3 rounded-tl-lg max-w-72 dark:bg-secondary p-2 break-words overflow-hidden text-ellipsis">
                               {message.message}
-                              <img
+                              <Image
+                                width="176"
+                                height="176"
                                 src={message.fileInfo.filePath}
                                 alt=""
                                 className="w-44 h-44 mt-2"
                               />
                             </h2>
                           </div>
-                          <img
+                          <Image
+                            width="176"
+                            height="176"
                             src={session.user?.image ?? ""}
                             alt=""
                             className="w-8 h-8 rounded-full"
@@ -212,7 +217,9 @@ export default function Page() {
                               </HoverCard>
                             </h2>
                           </div>
-                          <img
+                          <Image
+                            width="176"
+                            height="176"
                             src={session.user?.image ?? ""}
                             alt=""
                             className="w-8 h-8 rounded-full mt-2"
@@ -235,7 +242,9 @@ export default function Page() {
                           {message.message}
                         </h2>
                       </div>
-                      <img
+                      <Image
+                        width="176"
+                        height="176"
                         src={session.user?.image ?? ""}
                         alt=""
                         className="w-8 h-8 rounded-full"
@@ -252,8 +261,10 @@ export default function Page() {
                       key={index}
                       className="rightSide flex justify-start mb-2 "
                     >
-                      <div className="containerUser flex mr-4 gap-2">
-                        <img
+                      <div className="containerUser flex ml-4 gap-2">
+                        <Image
+                          width="176"
+                          height="176"
                           src={message.image ?? ""}
                           alt=""
                           className="w-8 h-8 rounded-full"
@@ -265,7 +276,9 @@ export default function Page() {
 
                           <h2 className=" bg-muted-foreground text-right rounded-b-lg mb-3 rounded-tr-lg max-w-72 dark:bg-secondary p-2 break-words overflow-hidden text-ellipsis">
                             {message.message}
-                            <img
+                            <Image
+                              width="176"
+                              height="176"
                               src={message.fileInfo.filePath}
                               alt=""
                               className="w-44 h-44 mt-2"
@@ -282,13 +295,15 @@ export default function Page() {
                       className="rightSide flex justify-start mb-2 "
                     >
                       <div className="containerUser flex mr-4 gap-2">
-                        <img
+                        <Image
+                          width="176"
+                          height="176"
                           src={message.image ?? ""}
                           alt=""
                           className="w-8 h-8 rounded-full"
                         />
                         <div className="textContainer">
-                          <h1 className="text-right font-normal text-[0.7rem] mb-2 text-muted-foreground ">
+                          <h1 className="text-left font-normal text-[0.7rem] mb-2 text-muted-foreground ">
                             {message.user}
                           </h1>
 
@@ -326,7 +341,9 @@ export default function Page() {
               return (
                 <div key={index} className="rightSide flex justify-start mb-2 ">
                   <div className="containerUser flex mr-4 gap-2">
-                    <img
+                    <Image
+                      width="176"
+                      height="176"
                       src={message.image ?? ""}
                       alt=""
                       className="w-8 h-8 rounded-full"

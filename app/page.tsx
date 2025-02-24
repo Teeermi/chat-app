@@ -30,14 +30,18 @@ export default function Home() {
 
   if (session) {
     return (
-      <div className="mainWrapper flex flex-col items-center mb-[-20rem] ">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-          Enter a room
-        </h2>
-
-        <Form action={moveToRoom} className="flex gap-2 mb-[25rem]">
-          <Input type="number" max={999} placeholder="Code" name="code" />
-          <Button type="submit">Move</Button>
+      <div className="mainWrapper flex flex-col items-center ">
+        <Form
+          action={moveToRoom}
+          className="flex gap-2 flex-col justify-center items-center"
+        >
+          <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+            Enter a room
+          </h2>
+          <div className="flex  ">
+            <Input type="number" max={999} placeholder="Code" name="code" />
+            <Button type="submit">Move</Button>
+          </div>
         </Form>
 
         <UserProfile session={session} />

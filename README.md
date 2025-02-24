@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-Time Chat App with WebSockets
 
-## Getting Started
+This is a feature-rich real-time chat application built with **Next.js**, **React**, **TypeScript**, **PostgreSQL**, **TailwindCSS**, **Auth.js**, **Prisma**, **Socket.io**, and **ShadCN**. This project offers a **unique code-based room system**, ensuring dynamic and fluid conversations while maintaining an open and intuitive user experience.
 
-First, run the development server:
+If something is wrong, feel free to message me! I'm open to criticism and improvements.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Special Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Real-time messaging** using WebSockets (Socket.io)
+- **GitHub authentication** via Auth.js
+- **Send photos and files** within the chat (stored in the `public` folder)
+- **Modern tech stack**: Next.js (latest), TypeScript, PostgreSQL, TailwindCSS, Prisma, ShadCN
+- **Enter public rooms and chat** – each room has a unique code
+- **Lightweight and efficient architecture – ensuring fast communication and smooth performance**
+- **Optimized performance** with database indexing for faster message retrieval
+- **Minimalist and responsive UI** with a focus on ease of use
+- **Scalability** – designed to handle multiple active rooms with smooth performance
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
 
-## Learn More
+   ```sh
+   git clone https://github.com/Teeermi/chat-app.git
+   cd chat-app
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```sh
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Set up environment variables:
 
-## Deploy on Vercel
+   - Create a `.env` file in the root directory
+   - Add the following environment variables:
+     ```env
+     AUTH_SECRET=your_auth_secret
+     AUTH_TRUST_HOST=your_auth_trust_host
+     AUTH_GITHUB_ID=your_github_id
+     AUTH_GITHUB_SECRET=your_github_secret
+     ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```sh
+   npm run dev
+   ```
+
+5. Build and start the production server:
+
+   ```sh
+   npm run build
+   npm run start
+   ```
+
+## 💻 Commands
+
+- **Start dev server**: `npm run dev`
+- **Build production**: `npm run build`
+- **Start production server**: `npm run start`
+
+## ❓ Questions?
+
+If you have any questions or suggestions, feel free to **DM me**!
+
+---
+
+### 🤝 Contributions & Feedback
+
+I'm open to feedback and contributions. If you find any issues or have improvements in mind, feel free to open an issue or send me a message!
+
+This project is an excellent showcase of real-time WebSockets technology combined with a modern UI/UX, making it a great addition to any portfolio! 🚀

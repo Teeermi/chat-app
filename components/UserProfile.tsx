@@ -6,7 +6,7 @@ import { Session } from "next-auth";
 
 export default function UserProfile({ session }: { session: Session }) {
   return (
-    <div className="userProfile flex gap-1 justify-center items-center  ">
+    <div className="userProfile flex gap-1 justify-center items-center absolute bottom-7  ">
       <Avatar>
         <AvatarImage src={`${session?.user?.image}`} />
         <AvatarFallback>CN</AvatarFallback>
