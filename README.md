@@ -67,6 +67,15 @@ If you have any questions or suggestions, feel free to **DM me**!
 
 ---
 
+## 🎥 Showcase
+
+https://prnt.sc/EgOc8ca6V3kO
+https://prnt.sc/QcVxAWNoDCSd
+https://prnt.sc/B4-_VG87KTT_
+https://prnt.sc/o1ZzOsdHXeKr
+
+---
+
 ### 🤝 Contributions & Feedback
 
 I'm open to feedback and contributions. If you find any issues or have improvements in mind, feel free to open an issue or send me a message!
